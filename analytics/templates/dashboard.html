@@ -32,10 +32,16 @@
                 <h1 class="text-3xl font-bold text-slate-100">🌱 Bloom AI Analytics</h1>
                 <p class="text-sm text-slate-400 mt-1">Last updated: {{ now }} (cache TTL 60s)</p>
             </div>
-            <button onclick="location.reload()"
-                    class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition text-sm font-medium">
-                Обновить
-            </button>
+            <div class="flex items-center gap-3">
+                <a href="/discounts"
+                   class="px-4 py-2 bg-slate-800 text-slate-100 rounded-lg hover:bg-slate-700 transition text-sm font-medium border border-slate-700">
+                    🏷️ Скидки
+                </a>
+                <button onclick="location.reload()"
+                        class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition text-sm font-medium">
+                    Обновить
+                </button>
+            </div>
         </div>
 
         <div class="border-b border-slate-800 mb-8">
