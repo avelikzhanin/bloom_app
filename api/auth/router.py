@@ -119,6 +119,37 @@ def _generate_code() -> str:
     return f"{secrets.randbelow(1_000_000):06d}"
 
 
+def _is_test_login(email: str, code: str) -> bool:
+    """
+    Тестовый вход для проверяющих (ЮKassa, модерация стора).
+
+    Вход в приложение идёт по одноразовому коду на почту, поэтому проверяющему
+    без доступа к ящику войти нечем. Здесь разрешаем фиксированный код для
+    ОДНОГО адреса из TEST_LOGIN_EMAIL / TEST_LOGIN_CODE.
+
+    Fail-closed: если хотя бы одна переменная не задана или код не из 6 цифр —
+    тестовый вход выключен полностью. Сравнение через compare_digest, чтобы
+    по времени ответа нельзя было подбирать код посимвольно.
+
+    Переменные читаются на каждый вызов: убрали их из окружения и
+    перезапустили контейнер — вход сразу перестал работать.
+    """
+    allowed_email = os.getenv("TEST_LOGIN_EMAIL", "").strip().lower()
+    allowed_code = os.getenv("TEST_LOGIN_CODE", "").strip()
+
+    if not allowed_email or not allowed_code:
+        return False
+    if len(allowed_code) != 6 or not allowed_code.isdigit():
+        logger.error(
+            "⚠️ TEST_LOGIN_CODE должен быть ровно из 6 цифр — тестовый вход отключён"
+        )
+        return False
+    return (
+        secrets.compare_digest(email, allowed_email)
+        and secrets.compare_digest(code, allowed_code)
+    )
+
+
 async def _ensure_email_codes_table(conn) -> None:
     """Создаёт таблицу кодов входа, если её ещё нет."""
     global _email_codes_table_ready
@@ -365,6 +396,25 @@ async def auth_email_verify_code(request: Request, req: EmailVerifyCodeRequest):
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Неверный код",
         )
+
+    # Тестовый вход для проверяющих: фиксированный код для одного адреса.
+    # Отдельная ветка до работы с таблицей кодов, чтобы письмо было не нужно.
+    # Включается только переменными окружения, см. _is_test_login.
+    if _is_test_login(email, code):
+        client_ip = request.client.host if request.client else "?"
+        logger.warning(
+            "🔑 Использован ТЕСТОВЫЙ вход: email=%s ip=%s", email, client_ip
+        )
+        db = await get_db()
+        async with db.pool.acquire() as conn:
+            user_id = await _find_or_create_user(
+                conn,
+                provider="email",
+                provider_user_id=email,
+                email=email,
+                first_name=None,
+            )
+        return TokenResponse(**create_tokens(user_id))
 
     code_hash = _hash_code(email, code)
 
