@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html><head><script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js": "assets/script-1f4adce8b7.js", "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "assets/script-0bacc06faf.js"};</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/script-8e8059f89f.js"></script>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110555241', 'ym');ym(110555241, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});</script><noscript></noscript></head><body><div><img src="assets/img-70174b67f0.gif" style="position:absolute; left:-9999px;" alt=""></div>
+
+<x-dc>
+<helmet>
+<title>Удаление аккаунта — Bloom</title>
+<meta name="description" content="Как удалить аккаунт и все данные в приложении Bloom: из самого приложения или по запросу на почту. Что удаляется и что сохраняется.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-language" content="ru"><link rel="canonical" href="https://bloomai.ru/delete-account.html">
+<style>/* ──────────────────────────────────────────────────────────────
+ * Bloom Design System — tokens
+ * Import first in any HTML artifact:
+ *   <link rel="stylesheet" href="../colors_and_type.css">
+ * ────────────────────────────────────────────────────────────── */
+
+/* Figtree, the personal-accent display face used for "Доброе утро, Kamilla" */
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-d017dd1d93.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-53665641b3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-d017dd1d93.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-53665641b3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-d017dd1d93.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-53665641b3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-d017dd1d93.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-53665641b3.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Inter — web substitute for SF Pro Display (which we can't ship) */
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-bf92af5506.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-0980a996fb.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-4174131ea2.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-0fcd5b940c.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-27cd341651.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-f979055936.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-5fe72f0498.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-bf92af5506.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-0980a996fb.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-4174131ea2.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-0fcd5b940c.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-27cd341651.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-f979055936.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/font-5fe72f0498.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-bf92af5506.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-0980a996fb.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-4174131ea2.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-0fcd5b940c.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-27cd341651.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-f979055936.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/font-5fe72f0498.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-bf92af5506.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-0980a996fb.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-4174131ea2.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-0fcd5b940c.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-27cd341651.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-f979055936.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/font-5fe72f0498.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Material Symbols Outlined — for every UI glyph */
+/* fallback */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/font-icons.woff2") format('woff2');
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+
+:root {
+  /* ── Brand greens ─────────────────────────────────────────── */
+  --bloom-green-600: rgb(0, 152, 80);        /* primary */
+  --bloom-green-500: rgb(76, 174, 79);       /* progress / secondary */
+  --bloom-green-400: rgb(100, 180, 120);
+  --bloom-green-300: rgb(74, 124, 89);       /* muted forest */
+  --bloom-green-200: rgb(148, 202, 160);
+  --bloom-green-100: rgb(230, 245, 236);     /* tint */
+  --bloom-green-50:  rgb(242, 250, 246);     /* whisper */
+  --bloom-green-a10: rgba(0, 152, 80, 0.1);
+  --bloom-green-a15: rgba(0, 152, 80, 0.15);
+  --bloom-green-a20: rgba(0, 152, 80, 0.2);
+  --bloom-green-a05: rgba(0, 152, 80, 0.05);
+
+  /* ── Foreground (plant-ink) ───────────────────────────────── */
+  --bloom-fg-900: rgb(10, 31, 19);
+  --bloom-fg-800: rgb(21, 29, 21);
+  --bloom-fg-700: rgb(43, 54, 41);     /* default heading color */
+  --bloom-fg-600: rgb(63, 73, 64);
+  --bloom-fg-500: rgb(115, 122, 111);  /* muted body */
+  --bloom-fg-400: rgb(148, 163, 156);
+
+  /* ── Background + surface ─────────────────────────────────── */
+  --bloom-bg:            rgb(246, 247, 246);
+  --bloom-surface:       rgb(255, 255, 255);
+  --bloom-surface-warm:  rgb(249, 248, 244);
+  --bloom-surface-sage:  rgb(234, 243, 236);
+  --bloom-border:        rgb(226, 224, 216);
+  --bloom-border-hairline: rgba(0, 152, 80, 0.05);
+
+  /* ── Accent (sparingly) ───────────────────────────────────── */
+  --bloom-coral-500: rgb(237, 107, 104);
+  --bloom-coral-400: rgb(242, 132, 130);   /* "Нужен полив" */
+  --bloom-coral-100: rgb(253, 232, 231);
+
+  --bloom-gold-500:  rgb(203, 146, 27);
+  --bloom-gold-400:  rgb(224, 168, 55);    /* premium crown, 67% streak */
+  --bloom-gold-100:  rgb(252, 244, 222);
+
+  --bloom-blue-400:  rgb(107, 146, 222);   /* water droplet accents */
+  --bloom-blue-100:  rgb(226, 234, 250);
+
+  --bloom-orange-500: rgb(237, 128, 56);   /* "Подкормить" fertilizer */
+  --bloom-orange-100: rgb(253, 232, 215);
+
+  /* ── Radii ────────────────────────────────────────────────── */
+  --bloom-radius-xs:   8px;
+  --bloom-radius-sm:  12px;
+  --bloom-radius-md:  16px;
+  --bloom-radius-lg:  24px;
+  --bloom-radius-xl:  32px;
+  --bloom-radius-pill: 9999px;
+
+  /* ── Spacing scale (4-based) ──────────────────────────────── */
+  --bloom-space-1:  4px;
+  --bloom-space-2:  8px;
+  --bloom-space-3:  12px;
+  --bloom-space-4:  16px;
+  --bloom-space-5:  20px;
+  --bloom-space-6:  24px;
+  --bloom-space-8:  32px;
+  --bloom-space-10: 40px;
+  --bloom-space-12: 48px;
+
+  /* ── Shadow + elevation ───────────────────────────────────── */
+  --bloom-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --bloom-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --bloom-shadow-md: 0 4px 6px -4px rgba(0, 0, 0, 0.1), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --bloom-shadow-green: 0 10px 15px -3px rgba(74, 124, 89, 0.3), 0 4px 6px -4px rgba(74, 124, 89, 0.3);
+
+  /* ── Type stack ───────────────────────────────────────────── */
+  --bloom-font-display: 'Figtree', 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+  --bloom-font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+  --bloom-font-icon:    'Material Symbols Outlined';
+
+  /* ── Motion ───────────────────────────────────────────────── */
+  --bloom-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --bloom-duration-fast: 120ms;
+  --bloom-duration-base: 200ms;
+  --bloom-duration-slow: 320ms;
+}
+
+/* ──────────────────────────────────────────────────────────────
+ * Base — reset-lite, Bloom body + heading defaults.
+ * ────────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bloom-bg);
+  color: var(--bloom-fg-700);
+  font-family: var(--bloom-font-body);
+  font-size: 16px;
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Semantic type roles ────────────────────────────────────── */
+h1, .bloom-h1 {
+  font-family: var(--bloom-font-body);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  color: var(--bloom-fg-800);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+h2, .bloom-h2 {
+  font-family: var(--bloom-font-body);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--bloom-fg-700);
+  margin: 0;
+}
+h3, .bloom-h3 {
+  font-family: var(--bloom-font-body);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--bloom-fg-700);
+  margin: 0;
+}
+h4, .bloom-h4 {
+  font-family: var(--bloom-font-body);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--bloom-fg-700);
+  margin: 0;
+}
+.bloom-greeting {
+  font-family: var(--bloom-font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--bloom-fg-700);
+}
+p, .bloom-body {
+  font-family: var(--bloom-font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--bloom-fg-700);
+  margin: 0;
+}
+.bloom-body-muted {
+  font-size: 16px;
+  color: var(--bloom-fg-500);
+}
+.bloom-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--bloom-fg-500);
+  line-height: 1.3;
+}
+.bloom-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--bloom-fg-500);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.bloom-tab-label {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  color: var(--bloom-fg-500);
+}
+.bloom-stat-number {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--bloom-green-600);
+  letter-spacing: -0.01em;
+}
+.bloom-mono {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, monospace;
+  font-size: 14px;
+}
+
+/* ── Common pieces ──────────────────────────────────────────── */
+.bloom-card {
+  background: var(--bloom-surface);
+  border: 1px solid var(--bloom-border-hairline);
+  border-radius: var(--bloom-radius-lg);
+  box-shadow: var(--bloom-shadow-xs);
+  padding: var(--bloom-space-6);
+}
+.bloom-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--bloom-radius-pill);
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--bloom-green-100);
+  color: var(--bloom-green-600);
+}
+.bloom-chip-icon {
+  width: 40px; height: 40px;
+  border-radius: var(--bloom-radius-sm);
+  background: var(--bloom-green-100);
+  color: var(--bloom-green-600);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--bloom-font-icon);
+  font-size: 22px;
+}
+.material-symbols-outlined,
+.bloom-icon {
+  font-family: var(--bloom-font-icon);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+</style>
+<link rel="icon" type="image/png" href="assets/img-3920e4c5be.webp">
+<style>
+body{background:var(--bloom-bg);color:var(--bloom-fg-700);font-family:var(--bloom-font-body)}
+a{color:var(--bloom-green-600)}
+a:hover{color:rgb(0,130,68)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,247,246,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--bloom-green-a05)}
+.nav-in{max-width:820px;margin:0 auto;padding:0 32px;height:74px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:9px;font-family:var(--bloom-font-display);font-weight:700;font-size:22px;color:var(--bloom-fg-900);letter-spacing:-.01em;text-decoration:none}
+.brand-mark{width:36px;height:36px;border-radius:11px;background:rgb(247,244,236);display:inline-flex;align-items:center;justify-content:center}
+.brand-mark img{width:24px;height:24px;display:block}
+.back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--bloom-fg-600);text-decoration:none}
+.back:hover{color:var(--bloom-green-600)}
+.back .material-symbols-outlined{font-size:18px}
+.doc{max-width:820px;margin:0 auto;padding:64px 32px 100px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bloom-green-600)}
+.doc-title{font-family:var(--bloom-font-display);font-weight:700;font-size:46px;line-height:1.08;letter-spacing:-.025em;color:var(--bloom-fg-900);margin:14px 0 0}
+.doc-meta{font-size:14px;color:var(--bloom-fg-400);margin:16px 0 0}
+.intro{font-size:17px;line-height:1.65;color:var(--bloom-fg-700);margin:28px 0 0}
+.sec{margin:52px 0 0;scroll-margin-top:90px}
+.sec-h{display:flex;gap:12px;align-items:baseline;font-family:var(--bloom-font-display);font-weight:700;font-size:24px;letter-spacing:-.01em;color:var(--bloom-fg-900);margin:0;counter-increment:s}
+.sec-h::before{content:counter(s);color:var(--bloom-green-600);font-size:18px;font-weight:700}
+.doc-body{counter-reset:s}
+.p{font-size:16px;line-height:1.7;color:var(--bloom-fg-700);margin:16px 0 0}
+.num{font-weight:600;color:var(--bloom-fg-500);margin-right:6px}
+.foot{max-width:820px;margin:0 auto;padding:30px 32px 60px;font-size:13px;color:var(--bloom-fg-400);border-top:1px solid var(--bloom-border)}
+@media(max-width:560px){.doc-title{font-size:34px}.doc{padding:44px 22px 72px}}
+</style>
+</helmet>
+<helmet data-dc-atomics=""></helmet>
+<nav class="nav"><div class="nav-in"><a class="brand" href="index.html"><span class="brand-mark"><img src="assets/img-3920e4c5be.webp" alt=""></span>Bloom</a><a class="back" href="index.html"><span class="material-symbols-outlined">&#xE5C4;</span>На главную</a></div></nav>
+<main class="doc"><span class="eyebrow">Аккаунт и данные</span><h1 class="doc-title">Удаление аккаунта</h1><p class="doc-meta">Приложение «Bloom» · Разработчик: Полевая Ирина Ивановна</p>
+<p class="intro">Вы можете в любой момент удалить свою учётную запись в приложении Bloom вместе со всеми связанными с ней данными. Удаление необратимо: восстановить аккаунт или данные после него невозможно.</p>
+<div class="doc-body">
+<section class="sec" id="s1"><h2 class="sec-h">Способ 1. Из приложения</h2><p class="p"><span class="num">1.1.</span>Откройте приложение Bloom и перейдите на вкладку <strong>Профиль</strong>.</p><p class="p"><span class="num">1.2.</span>Пролистайте экран вниз и нажмите <strong>«Удалить аккаунт»</strong>.</p><p class="p"><span class="num">1.3.</span>Подтвердите удаление в диалоговом окне. Аккаунт и данные удаляются сразу.</p></section>
+<section class="sec" id="s2"><h2 class="sec-h">Способ 2. По запросу на почту</h2><p class="p"><span class="num">2.1.</span>Если вы уже удалили приложение или не можете войти, направьте запрос с адреса электронной почты, на который зарегистрирован аккаунт, на <a href="mailto:bloom.ai@yandex.com?subject=Удаление%20аккаунта%20Bloom">bloom.ai@yandex.com</a> с темой «Удаление аккаунта».</p><p class="p"><span class="num">2.2.</span>Если вход выполнялся через Яндекс ID, укажите в письме адрес почты вашего Яндекс-аккаунта.</p><p class="p"><span class="num">2.3.</span>Запрос обрабатывается в течение 7 дней. Мы можем попросить подтвердить, что запрос направлен владельцем аккаунта, ответным письмом.</p></section>
+<section class="sec" id="s3"><h2 class="sec-h">Что удаляется</h2><p class="p"><span class="num">3.1.</span>При удалении аккаунта полностью и безвозвратно удаляются: адрес электронной почты и имя; все добавленные растения, их фотографии и история ухода; история вопросов ИИ-ассистенту и ответов; достижения и статистика; настройки уведомлений и идентификатор устройства; сведения о подписке.</p><p class="p"><span class="num">3.2.</span>Действующая подписка при удалении аккаунта прекращается, автоматические списания останавливаются. Средства за неиспользованный период не возвращаются, если иное не предусмотрено законодательством.</p></section>
+<section class="sec" id="s4"><h2 class="sec-h">Что сохраняется</h2><p class="p"><span class="num">4.1.</span>Сведения о совершённых платежах хранятся платёжным сервисом ЮKassa (ООО НКО «ЮМани») в течение срока, установленного законодательством о бухгалтерском учёте и противодействии легализации доходов. Эти сведения не содержат данных о ваших растениях и не позволяют восстановить аккаунт.</p><p class="p"><span class="num">4.2.</span>Обезличенные статистические данные об использовании приложения, не позволяющие идентифицировать пользователя, могут сохраняться в сервисе аналитики.</p></section>
+<section class="sec" id="s5"><h2 class="sec-h">Дополнительно</h2><p class="p"><span class="num">5.1.</span>Порядок обработки и защиты персональных данных описан в <a href="privacy.html">Политике конфиденциальности</a>. По любым вопросам, связанным с вашими данными, пишите на <a href="mailto:bloom.ai@yandex.com">bloom.ai@yandex.com</a>.</p></section>
+</div></main>
+<footer class="foot">© 2026 Bloom. Все права защищены.</footer>
+</x-dc>
+
+
+</body></html>
